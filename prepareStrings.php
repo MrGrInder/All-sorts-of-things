@@ -25,16 +25,16 @@ class Api
 	public function get_api_path(array $array, string $template) : string
 	{
 		$result = '';
-        $modifyString = $template;
-        
-        foreach ($array as $key => $value)
-        {
-            $modifyString = strtr("%{$key}%", $value, $modifyString);
-        }
-        
-        if (strpos($modifyString, '%') === false) {
-            $result = $modifyString;
-        }
+	        $modifyString = $template;
+	        
+	        foreach ($array as $key => $value)
+	        {
+	            $modifyString = strtr("%{$key}%", $value, $modifyString);
+	        }
+	        
+	        if (strpos($modifyString, '%') === false) {
+	            $result = $modifyString;
+	        }
 
 		return $result;
 	}
