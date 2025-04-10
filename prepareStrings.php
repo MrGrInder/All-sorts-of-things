@@ -32,7 +32,8 @@ class Api
 	            $modifyString = strtr("%{$key}%", $value, $modifyString);
 	        }
 	        
-	        if (strpos($modifyString, '%') === false) {
+	        if (strpos($modifyString, '%') === false)
+		{
 	            $result = $modifyString;
 	        }
 
